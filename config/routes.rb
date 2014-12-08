@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   post 'twilio/voice' => 'twilio#voice'
+  post 'notifications/notify' => 'notifications#notify'
+  get 'notifications/send_msgs' => 'notifications#send_msgs'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

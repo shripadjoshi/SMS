@@ -1,0 +1,26 @@
+<fieldset>
+  <legend class="pd-review-legend">Send Message</legend>
+  <%= form_tag("/notifications/notify", method: "post") do %>
+    <div class="form-container">
+      <div class="form-content">
+        <div>
+          <label for="msg">Message </label>
+          <div class="form-input">
+            <%= text_area_tag :message %>
+          </div>
+        </div>
+        <div>
+          <label for="mob_number">Mobile No.</label>
+          <div class="form-input">
+            <%= text_field_tag :mob_no %>
+          </div>
+        </div>
+        <div>
+          <div class="actions">
+            <%= submit_tag "Send" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</fieldset>
